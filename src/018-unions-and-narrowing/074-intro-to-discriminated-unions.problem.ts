@@ -8,13 +8,14 @@ type Shape = {
 };
 
 function calculateArea(shape: Shape) {
-  if (shape.kind === "circle") {
-    return Math.PI * shape.radius * shape.radius;
-  } else {
-    return shape.sideLength * shape.sideLength;
+
+  switch (shape.kind) {
+    case "circle":
+      return Math.PI * shape.radius! * shape.radius!;
+    case "square":
+      return shape.sideLength! * shape.sideLength!;
   }
 }
-
 it("Should calculate the area of a circle", () => {
   const result = calculateArea({
     kind: "circle",
