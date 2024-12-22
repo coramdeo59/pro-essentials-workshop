@@ -21,11 +21,11 @@ type Product = {
   imageId: string;
 };
 
-type Entity = User | Organisation | Product;
+type Entity = User | Organisation | Product; 
 
-type EntityWithoutId = Omit<Entity, "id">;
+type EntityWithoutId = Omit<Entity, "id"
 //   ^?
-
+ 
 type test = Expect<
   Equal<
     EntityWithoutId,
