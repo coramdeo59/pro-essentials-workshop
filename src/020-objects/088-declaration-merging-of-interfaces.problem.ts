@@ -17,3 +17,4 @@ myLogger.log(
   // @ts-expect-error Level is NOT needed
   123,
 );
+  
